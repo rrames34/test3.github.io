@@ -16,7 +16,7 @@ timezone:
 
 title: Rajesh Ramesh # the main title
 
-tagline: Never stopped learning # it will display as the subtitle
+tagline: PhD candidate at ASU # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.

@@ -9,52 +9,32 @@ order: 2
 
 ## 1.  Particle Dynamics within a Tornado-like Vortex (Doctoral Research)
 
-### Flow Configuration
-A tornado-like vortex is a complex flow characterized by **radial inflow**, **intense azimuthal swirl**, and **upward axial transport**. The dominant non-dimensional parameter governing the structure and stability of such flows is the **swirl ratio**, defined as the ratio of angular momentum to radial inflow rate.
+---
 
-- **Low swirl ratios:**  
-  The vortex core exhibits a laminar axial jet that undergoes **vortex breakdown** at a finite height.
+### Particle dynamics in a tornado-like vortex
 
+
+Tornado-like vortex is a fascinating flow characterized by a radially converging flow that swirls and is advected upwards. A key non-dimensional parameter that controls the dynamics of such flow is called the swirl ratio. Swirl ratio is the ratio of the angular momentum to the radial inflow rate. At low swirl ratios, the core of the vortex has a laminar jet that breaks down at a certain height called vortex breakdown. At higher swirl ratios vortex breakdown occurs at the surface thus the entire vortex core is turbulent.
+
+Entrainment of sand-like particles by a tornado-like vortex is representative of geophysical phenomena called dust devils. The intense cloud of particles generated is strong enough to disturb the flow which is captured in these simulations.
+
+{% include embed/youtube.html id='B9P-on9yb8U' w='48%' %}
 {% include embed/youtube.html id='do4Ew8c-nGM' w='48%' %}
-
-- **High swirl ratios:**  
-  Vortex breakdown occurs at or near the surface, resulting in a fully turbulent vortex core throughout the domain.
-
-{% include embed/youtube.html id='lAxdf9ytp-U' w='48%' %}
-
----
-
-### Particle Dynamics and Flow–Particle Interaction
-The dynamics of **suspended sand particles** within the vortex are strongly coupled to the turbulent flow field. The presence of particles can significantly modify the underlying vortex dynamics.
-
-Initial studies indicate that **vortex breakdown is suppressed in the presence of particles**, a phenomenon captured through **two-way coupled particle–flow interactions**. Key features of the particle model include:
-
-- High particle **coefficients of restitution**
-- Large **spring stiffness constants** for collision modeling
-- Formation and evolution of a **particle bed** at the surface
-- Entrainment, suspension, and clustering of particles within the vortex
-
-{% include embed/youtube.html id='lM57F5_2UQY' w='48%' %}
-
----
 
 ### Computational Methods
 - **CFD solver:** `Nek5000`[^nek5000] 
 - **Multiphase flow model for particle-laden flow:** Euler–Lagrange formulation within Nek5000 using `ppiclF`[^ppiclf], allowing particles to advance concurrently with the flow solver
 - **Physics captured:**
+  - Influence of flowfield due to the non-negligible volume occupied by finite-sized particles
+  - Inter-phase momentum exchange between particles and fluid
   - Particle–particle collisions using elastic spring-damper models
   - Particle friction 
   - Gravitational force on particles
   - Fluid-induced forces and moments on particles - Drag, lift and hydrodynamic torque
-  - Inter-phase momentum exchange between particles and fluid
-  - Influence of flowfield due to the non-negligible volume occupied by finite-sized particles
 
----
-
-### High-Performance Computing
-- MPI-based parallel simulation runs
-- Optimized simulations compiled and run with **Intel compilers** on supercomputers (Stampede3, ASU Sol supercomputer)
-- Production runs efficiently scaled up to **1000 CPUs**
+- **High-Performance Computing**
+  - MPI-based parallel simulation runs
+  - Optimized simulations compiled and run with **Intel compilers** on world's top 500 supercomputers (Stampede3, ASU Sol supercomputer)
 
 
 
@@ -70,9 +50,6 @@ Dynamics of sweat evaporation on skin ranges from in-pore sweating, sweat drople
 
 
 ![im1](images/im1.jpg)
-
-
-- Artificial sweating skin
 
 
 
